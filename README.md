@@ -31,7 +31,6 @@ The `Expense` class represents an individual financial expense:
 - `__init__(self, title, amount)`: Initializes the attributes.
 - `update(self, title=None, amount=None)` : Allows updating the title and/or amount, updating the updated_at timestamp.
 - `to_dict(self)` : Returns a dictionary representation of the expense.
-- `__str__(self)`: Returns a string representation of the expense.
 
 ### ExpenseDatabase
 
