@@ -27,16 +27,13 @@ class Expense:
         """
         This function allows updating the title and/or amount, updating the updated_at timestamp.
         """
-        try:
-            if title != None or amount != None:
-                self.title = str(title) if title is not None else self.title
-                self.amount = float(amount) if amount is not None else self.amount
-                self.updated_at = datetime.utcnow()
-                print(f"succesfully updated at {self.updated_at}")
-            else:
-                print(f'Please provide the attribute to update.')
-        except (TypeError, ValueError):
-            print(f"Provide a valid string as the title and/or a valid number as the amount.") 
+        if title != None or amount != None:
+            self.title = str(title) if title is not None else self.title
+            self.amount = float(amount) if amount is not None else self.amount
+            self.updated_at = datetime.utcnow()
+            print(f"succesfully updated at {self.updated_at}")
+        else:
+            print(f'Please provide the title and/or amount to update.')
 
     def to_dict(self):
         """
